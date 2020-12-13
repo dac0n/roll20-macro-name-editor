@@ -1,10 +1,13 @@
+
 let uploadedFile = JSON.parse(localStorage.getItem('defaultJSON'));
 //console.log(uploadedFile);
 let filename = "";
+let fileBackup = JSON.parse(JSON.stringify(uploadedFile));  //since we need a deep clone
 
 async function uploadFile(elm) {
   await new Response(elm.files[0]).json().then((file) => {
     uploadedFile = file;
+    fileBackup = JSON.parse(JSON.stringify(uploadedFile)); 
     document.getElementById(
       "status"
     ).innerHTML = `Selected file: ${elm.files[0].name}`;
@@ -12,8 +15,9 @@ async function uploadFile(elm) {
 }
 
 document.getElementById("button").onclick = () => {
+  let uploadedFile = JSON.parse(JSON.stringify(fileBackup));  //since we need a deep clone
   let characterName = document.getElementById("name").value;
-
+  console.log(characterName);
   for (macro of uploadedFile.macros) {
     macro.attributes.action = macro.attributes.action.replaceAll(
       "selected",
