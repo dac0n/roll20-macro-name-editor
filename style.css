@@ -23,3 +23,9 @@ input[type="file"] {
     margin: 10px 0px;   
     cursor: pointer;
 }
+
+#status{
+    border: none;
+    padding: 0;
+    margin: 0;
+}

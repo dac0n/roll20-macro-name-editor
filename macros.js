@@ -1,4 +1,7 @@
-{
+//did this to avoid using server or any libraries/frameworks. as you can see, it's all written in a pure JS.
+//while this file is JS file, it actually does the work of a JSON file.
+
+macros = {
     "schema_version": 2,
     "macros": [
         {
@@ -39,3 +42,5 @@
         }
     ]
 }
+
+localStorage.setItem('defaultJSON', JSON.stringify(macros));
