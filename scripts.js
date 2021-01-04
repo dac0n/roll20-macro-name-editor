@@ -32,7 +32,7 @@ document.getElementById("button").onclick = () => {
   a.href = "data:" + changedMacros;
   a.download = `${characterName}_macros.json`;
   a.innerHTML = `Download macros of ${characterName}`;
-  var container = document.getElementById("container");
+  let container = document.getElementById("container");
   container.appendChild(a);
   a.click();
   a.remove();
