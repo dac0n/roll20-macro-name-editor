@@ -1,7 +1,5 @@
 
 let uploadedFile = JSON.parse(localStorage.getItem('defaultJSON'));
-//console.log(uploadedFile);
-let filename = "";
 let fileBackup = JSON.parse(JSON.stringify(uploadedFile));  //since we need a deep clone
 
 async function uploadFile(elm) {
