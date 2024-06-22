@@ -5,4 +5,4 @@ You don't need to download anything, you can just use vercel link: https://roll2
 
 If no file selected, you can download default macros (skill check, ability check and saving throws macros).
 
-There are only pure JS in that code.
+Code contains only pure js.
